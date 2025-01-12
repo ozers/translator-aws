@@ -1,0 +1,14 @@
+{
+  "body": "{\"text\": \"Hello, this is a test message\", \"target\": \"tr\"}",
+  "resource": "/translate",
+  "path": "/translate",
+  "httpMethod": "POST",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "requestContext": {
+    "resourcePath": "/translate",
+    "httpMethod": "POST",
+    "path": "/Prod/translate"
+  }
+}
