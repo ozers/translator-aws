@@ -36,7 +36,7 @@ describe('Translate Function Tests', () => {
         expect(JSON.parse(response.body).error).to.equal('Invalid JSON in request body');
     });
 
-    // Note: This is a mock test. In real scenario, we would mock AWS Translate client
+    // Note: This is a mock test. In real scenario, we would mock Amazon Translate client
     it('should handle successful translation', async () => {
         const event = {
             body: JSON.stringify({

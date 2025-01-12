@@ -1,6 +1,6 @@
-# AWS Translate Demo
+# Amazon Translate Demo
 
-This project demonstrates the usage of AWS Translate service with a serverless architecture using AWS Lambda and a simple frontend interface.
+This project demonstrates the usage of Amazon Translate service with a serverless architecture using AWS Lambda and a simple frontend interface.
 
 ## Project Structure
 
