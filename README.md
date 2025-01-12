@@ -93,6 +93,26 @@ The application handles various error cases:
 - AWS credentials are managed through IAM roles
 - Environment variables are used for configuration
 
+## Cleanup
+
+To remove all AWS resources created by this project:
+
+```bash
+sam delete
+```
+
+This command will:
+- Delete the CloudFormation stack
+- Remove the Lambda function
+- Remove the API Gateway
+- Clean up all associated resources
+
+Note: If you saved your configuration in `samconfig.toml`, the command will use those settings. Otherwise, you'll need to specify the stack name:
+
+```bash
+sam delete --stack-name <your-stack-name>
+```
+
 ## License
 
 This project is open source and available under the MIT License.
