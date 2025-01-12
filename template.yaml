@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: AWS Translator Application
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs18.x
+  Api:
+    Cors:
+      AllowMethods: "'POST,OPTIONS'"
+      AllowHeaders: "'Content-Type'"
+      AllowOrigin: "'*'"
+
+Resources:
+  TranslateFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: translate/
+      Handler: app.lambdaHandler
+      Policies:
+        - TranslateReadOnly
+      Events:
+        TranslateAPI:
+          Type: Api
+          Properties:
+            Path: /translate
+            Method: post
+
+Outputs:
+  TranslateApi:
+    Description: "API Gateway endpoint URL for Prod stage"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/translate/"

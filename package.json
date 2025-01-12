@@ -1,0 +1,27 @@
+{
+  "name": "translator-aws",
+  "version": "1.0.0",
+  "description": "AWS Translate API with Serverless Application Model",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sam build",
+    "deploy": "sam deploy",
+    "start": "sam local start-api"
+  },
+  "dependencies": {
+    "@aws-sdk/client-translate": "^3.0.0"
+  },
+  "devDependencies": {
+    "aws-sam-cli": "^1.0.0"
+  },
+  "keywords": [
+    "aws",
+    "sam",
+    "serverless",
+    "translate",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT"
+} 
