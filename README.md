@@ -1,118 +1,57 @@
-# Amazon Translate Demo
+# 🌐 Amazon Translate Demo
 
-This project demonstrates the usage of Amazon Translate service with a serverless architecture using AWS Lambda and a simple frontend interface.
+[![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Project Structure
+> A modern translation application powered by Amazon Translate service with AWS Lambda and a sleek frontend interface.
 
-```
-translator-aws/
-├── translate/
-│   ├── app.js         # Lambda function handler
-│   └── index.html     # Frontend interface
-└── README.md
-```
+## ✨ Features
 
-## Features
+- 🌍 **Multi-language Support**: Translate between multiple languages
+- 🔍 **Auto Detection**: Automatically detect source language
+- 💅 **Modern UI**: Clean interface with Tailwind CSS
+- ⚡ **Serverless**: Powered by AWS Lambda
+- 🔒 **Secure**: CORS enabled and AWS IAM protected
 
-- Text translation between multiple languages
-- Auto language detection
-- Simple and responsive UI using Tailwind CSS
-- Serverless backend using AWS Lambda
-- CORS enabled for cross-origin requests
+## 🚀 Quick Start
 
-## Prerequisites
-
-- AWS Account
-- [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) installed
-- Node.js and npm installed
-- AWS SDK v3 for JavaScript
-
-## Setup
-
-1. **Install Dependencies**
+1. **📦 Install Dependencies**
    ```bash
    cd translate
    npm install @aws-sdk/client-translate
    ```
 
-2. **Deploy with SAM**
+2. **⚡ Deploy**
    ```bash
-   # Build the application
    sam build
-
-   # Deploy the application
    sam deploy --guided
    ```
 
-   During the guided deployment, you'll be asked to provide:
-   - Stack Name (e.g., translator-aws)
-   - AWS Region
-   - Confirm changes before deploy
-   - Allow SAM CLI IAM role creation
-   - Save arguments to samconfig.toml
-
-   The deployment will:
-   - Create a Lambda function with the necessary IAM role and permissions
-   - Set up an API Gateway with CORS enabled
-   - Output the API endpoint URL
-
-3. **Frontend Setup**
+3. **🎨 Update Frontend**
    - Open `translate/index.html`
-   - Replace `ENTER YOUR API ENDPOINT URL HERE` with the API Gateway endpoint URL from the SAM deployment output
-   - The URL will look like: `https://xxxxxx.execute-api.region.amazonaws.com/Prod/translate/`
+   - Replace `ENTER YOUR API ENDPOINT URL HERE` with your API Gateway URL
 
-## Usage
+## 📋 Prerequisites
 
-1. Open `translate/index.html` in a web browser
-2. Enter the text you want to translate in the "Source Text" field
-3. Select source language (or leave as "Auto Detect")
-4. Select target language
-5. Click "Translate" button
-6. The translated text will appear in the "Translation" field
+- 🏢 AWS Account
+- 🛠️ AWS SAM CLI
+- 💻 Node.js & npm
+- 📦 AWS SDK v3
 
-## Supported Languages
-
-- English (en)
-- Turkish (tr)
-- Spanish (es)
-- French (fr)
-- German (de)
-- Italian (it)
-- Japanese (ja)
-
-## Error Handling
-
-The application handles various error cases:
-- Invalid JSON in request body
-- Missing required parameters
-- Translation service errors
-
-## Security
-
-- CORS headers are properly configured
-- AWS credentials are managed through IAM roles
-- Environment variables are used for configuration
-
-## Cleanup
-
-To remove all AWS resources created by this project:
+## 🧹 Cleanup
 
 ```bash
 sam delete
 ```
 
-This command will:
-- Delete the CloudFormation stack
-- Remove the Lambda function
-- Remove the API Gateway
-- Clean up all associated resources
+## 📚 Documentation
 
-Note: If you saved your configuration in `samconfig.toml`, the command will use those settings. Otherwise, you'll need to specify the stack name:
+For detailed setup instructions and implementation details, check out the article:
+[Create a Translation Application with Amazon Translate](https://ozers.medium.com/create-a-translation-application-with-amazon-translate-3d7949149952)
 
-```bash
-sam delete --stack-name <your-stack-name>
-```
+---
 
-## License
-
-This project is open source and available under the MIT License.
+<div align="center">
+  <sub>Built with ❤️ by Ozer Subasi</sub>
+</div>
